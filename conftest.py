@@ -33,8 +33,8 @@ def driver(device):
     if device == 'android':
         desired_capabilities = dict(
             platformName="Android",
-            appPackage="",
-            appActivity="",
+            appPackage="com.make.money.now.big.cash.reward.app.paid.surveys.earn.money.mini.job",
+            appActivity="com.zoontek.rnbootsplash.RNBootSplashActivity",
             automationName="UiAutomator2",
             unicodeKeyboard=True,
             resetKeyboard=True,
@@ -66,4 +66,3 @@ def pytest_runtest_makereport(item):
         feature_request = item.funcargs["request"]
         driver = feature_request.getfixturevalue("driver")
         attach(data=driver.get_screenshot_as_png())
-
